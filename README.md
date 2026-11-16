@@ -2,6 +2,8 @@
 
 An end-to-end portfolio project exploring the supplied Blinkit grocery outlet dataset with **Python, SQL and Power BI-ready reporting**. The repository also includes a working interactive browser dashboard.
 
+https://krishnabansal0302.github.io/Blinkit-Sales-Analysis/dashboard/
+
 ## What is included
 
 - `data/raw/` — original CSV, preserved unchanged.
