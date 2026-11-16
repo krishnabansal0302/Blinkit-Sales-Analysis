@@ -1,0 +1,24 @@
+-- Import data/processed/blinkit_cleaned.csv into Power BI.
+-- Rename the imported table to blinkit_cleaned (Model view) before adding these measures.
+
+Total Sales = SUM(blinkit_cleaned[Sales])
+
+Average Sales per Record = AVERAGE(blinkit_cleaned[Sales])
+
+Average Rating = AVERAGE(blinkit_cleaned[Rating])
+
+Unique Products = DISTINCTCOUNT(blinkit_cleaned[Item Identifier])
+
+Unique Outlets = DISTINCTCOUNT(blinkit_cleaned[Outlet Identifier])
+
+Record Count = COUNTROWS(blinkit_cleaned)
+
+Sales Share % =
+DIVIDE(
+    [Total Sales],
+    CALCULATE([Total Sales], ALLSELECTED(blinkit_cleaned))
+)
+
+Average Item Visibility = AVERAGE(blinkit_cleaned[Item Visibility])
+
+Average Item Weight = AVERAGE(blinkit_cleaned[Item Weight])
